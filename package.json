@@ -11,10 +11,15 @@
   "keywords": [],
   "author": "Jose Erick Carreon Gomez <support@joserick.com>",
   "dependencies": {
-    "toolkit-docs": "https://github.com/orchestral/toolkit-docs",
-    "vitepress": "^1.2.0",
+    "toolkit-docs": "github:orchestral/toolkit-docs",
+    "vitepress": "^1.6.4",
     "vitepress-plugin-mcp": "^0.2.0"
   },
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "pnpm": {
+    "overrides": {
+      "esbuild": ">=0.25.0"
+    }
+  }
 }
