@@ -1,6 +1,7 @@
 import { createServer, resolveConfig } from 'vitepress'
 
 const mcpPort = Number(process.env.PORT) || 4000
+const mcpHost = process.env.HOST || '0.0.0.0'
 
 async function main() {
   const root = process.cwd()
@@ -9,14 +10,18 @@ async function main() {
   const config = await resolveConfig(root)
   console.log('📚 VitePress config resolved')
   console.log(`   Source (srcDir): ${config.srcDir}`)
+  console.log(`   PORT env: ${process.env.PORT}`)
+  console.log(`   HOST env: ${process.env.HOST || '0.0.0.0 (default)'}`)
 
   // Start VitePress server with MCP plugin
-  const server = await createServer(root, { port: mcpPort })
+  const server = await createServer(root, {
+    port: mcpPort,
+    host: mcpHost,
+  })
   await server.listen()
 
   console.log('')
-  console.log('🚀 Server started on port:')
-  console.log(`   http://localhost:${mcpPort}`)
+  console.log(`🚀 Server started on http://${mcpHost}:${mcpPort}`)
   console.log(`   http://localhost:${mcpPort}/mcp`)
   console.log(`   http://localhost:${mcpPort + 1}/mcp`)
   console.log('')
