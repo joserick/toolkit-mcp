@@ -1,0 +1,20 @@
+{
+  "name": "toolkit-mcp",
+  "version": "0.0.1",
+  "description": "A toolkit for building MCP (Model Context Protocol) clients and servers",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "start": "node server.mjs",
+    "update-docs": "npm install --force toolkit-docs@https://github.com/orchestral/toolkit-docs"
+  },
+  "keywords": [],
+  "author": "Jose Erick Carreon Gomez <support@joserick.com>",
+  "dependencies": {
+    "toolkit-docs": "https://github.com/orchestral/toolkit-docs",
+    "vitepress": "^1.2.0",
+    "vitepress-plugin-mcp": "^0.2.0"
+  },
+  "license": "MIT",
+  "type": "module"
+}
