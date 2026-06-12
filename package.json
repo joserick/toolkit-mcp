@@ -16,11 +16,5 @@
     "vitepress-plugin-mcp": "^0.2.0"
   },
   "license": "MIT",
-  "type": "module",
-  "pnpm": {
-    "overrides": {
-      "esbuild": ">=0.25.0"
-    },
-    "onlyBuiltDependencies": ["esbuild"]
-  }
+  "type": "module"
 }
